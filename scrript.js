@@ -11,21 +11,27 @@ document.addEventListener('DOMContentLoaded',()=>{
     let redDots = document.querySelectorAll('.redDot');
     let _userName = document.querySelectorAll('._userName');
     let markAs = document.getElementById('markAs')
-
- 
+    let numOfNotify = document.getElementById('numberOFNotifications')
 
     // this for each element change
     for (let i = 0; i < _userName.length; i++) {
         const element = _userName[i];
+        let counter = i ;
+        numOfNotify.innerHTML='7';
         element.addEventListener('click',()=>{
           let con =  notifications_container[i];
           let red =  redDots[i];
           con.style.backgroundColor="white"
           red.classList.add('d-none')
+          let currentNum = parseInt(numOfNotify.innerHTML, 10);
+          if (currentNum > 0) {
+            numOfNotify.innerHTML = (currentNum - 1).toString();
+        }
         })
+
+        console.log(counter)
     }
     // this for all elements change
-
     markAs.addEventListener('click',()=>{
     notifications_container.forEach((e)=>{
     e.style.backgroundColor="white"
@@ -33,9 +39,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     redDots.forEach((e)=>{
     e.classList.add('d-none')
     })
+    numOfNotify.innerHTML='0';
     })
-
-  
 });
   
 
