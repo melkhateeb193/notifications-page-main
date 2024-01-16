@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         })
 
-        console.log(counter)
     }
     // this for all elements change
     markAs.addEventListener('click',()=>{
