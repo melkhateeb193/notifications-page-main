@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+* {
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --Blue: hsl(219, 85%, 26%);
+    --Red: hsl(1, 90%, 64%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue:  hsl(210, 60%, 98%);
+    --light-grayish-blue-1:  hsl(211, 68%, 94%);
+    --light-grayish-blue-2:  hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue:  hsl(219, 12%, 42%);
+    --Very-dark-blue:  hsl(224, 21%, 14%);
+}
+
+body {
+    font-size: 1vw; /* Adjust font size relative to viewport width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-grayish-blue);
+    font-family: var(--font-family);
+}
+
+main {
+    background-color: var(--White);
+    width: 60% !important; /* Use percentage for responsive width */
+    max-width: 800px; /* Set a maximum width to avoid stretching on larger screens */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}
+
+h1 {
+    font-size: 2vw; /* Adjust font size relative to viewport width */
+    font-weight: 800;
+}
+
+#numberOFNotifications {
+    background-color: var(--Blue);
+    color: var(--White);
+    padding: 0.5vw 1.2vw; /* Adjust padding relative to viewport width */
+    border-radius: 10px;
+    font-size: 1vw; /* Adjust font size relative to viewport width */
+    margin: 1vw;
+}
+
+img {
+    width: 4vw; /* Adjust image width relative to viewport width */
+}
+
+p {
+    margin: 0 !important;
+}
+
+#markAs {
+    color: var(--Blue);
+    font-size: 1vw; /* Adjust font size relative to viewport width */
+    cursor: pointer;
+}
+
+._userName {
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+}
+._userName:hover {
+    color: var(--Blue);
+}
+.txtMain {
+    color: var(--Dark-grayish-blue);
+}
+
+.userAction {
+    color: var(--Blue);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.redDot {
+    display: inline-block;
+    width: 0.5vw; /* Adjust width relative to viewport width */
+    height: 0.5vw; /* Adjust height relative to viewport width */
+    border: 1px solid var(--Red);
+    border-radius: 50%;
+    background-color: var(--Red);
+}
+
+.actionTime {
+    color: var(--Grayish-blue);
+}
+
+.messegeForRizky {
+    background-color: var(--White);
+    padding: 1vw; /* Adjust padding relative to viewport width */
+    border-radius: 10px;
+    margin-left: 4vw;
+    border: 1px solid var(--Dark-grayish-blue);
+}
+.messegeForRizky:hover {
+    border:none;
+    background-color: var(--light-grayish-blue-2);
+}
+
+.newLineParagraph {
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+}
+
+#containerForNotification ,#containerForNotification1 ,#containerForNotification2,
+#containerForNotification3,#containerForNotification4,#containerForNotification5,#containerForNotification6 {
+    background-color: var(--Very-light-grayish-blue);
+    border-radius: 10px;
+    padding: 1vw; /* Adjust padding relative to viewport width */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1vw; /* Adjust font size for smaller screens */
+    }
+
+    #numberOFNotifications {
+        font-size: 1vw; /* Adjust font size for smaller screens */
+    }
+
+    img {
+        width: 1.5vw; /* Adjust image width for smaller screens */
+    }
+
+    #markAs {
+        font-size: 1vw; /* Adjust font size for smaller screens */
+    }
+}
